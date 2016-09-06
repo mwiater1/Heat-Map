@@ -1,0 +1,25 @@
+#heatMap {
+    background-color: #ffffff;
+}
+body {
+    background-color: #000000;
+    font-family: Hack, monospace;
+    color: green;
+}
+.innerContainer {
+    width: 25px;
+    height: 25px;
+    float:left;
+    margin-right:5px;
+}
+#heading {
+    text-align: center;
+    text-decoration: underline;
+    -webkit-text-size-adjust: auto;
+}
+#colorScale {
+    text-decoration: underline;
+}
+#heatMap {
+    margin-top: 10px;
+}

@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
+
+shadowJar {
+    baseName = 'myproject-all'
+    classifier = ''
+}
+
+if(JavaVersion.current() != JavaVersion.VERSION_1_8){
+    throw new GradleException("This build must be run with java 8")
+}
+
+version = '1.0'
+
+mainClassName = 'com.mateuszwiater.csc375.a3.Main'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main.java.srcDir 'src/main/java'
+    main.resources.srcDir 'src/main/resources'
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.sparkjava:spark-core:2.3'
+    compile 'com.sparkjava:spark-template-freemarker:2.3'
+    testCompile 'junit:junit:4.11'
+}
+
+jar {
+    baseName = 'a3'
+    version = this.version;
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}
