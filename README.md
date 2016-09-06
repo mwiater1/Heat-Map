@@ -8,3 +8,5 @@ To run this assignemnt issue the following command in the project root:
 ./gradlew run
 ``` 
 Then in a browser head to: [http://localhost:4567/](http://localhost:4567/)
+
+Assignement created in the fall semester of 2015.
